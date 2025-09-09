@@ -1,0 +1,7 @@
+<launch>
+  <arg name="camera_topic" default="/camera/image_raw" />
+
+  <node pkg="aruco_localization" type="webcam_republisher.py" name="webcam_republisher" output="screen">
+    <remap from="/camera/image_raw" to="$(arg camera_topic)" />
+  </node>
+</launch>

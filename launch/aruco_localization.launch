@@ -1,0 +1,21 @@
+<launch>
+  <arg name="marker_size" default="0.05" /> 
+  <arg name="camera_fx"   default="600.0" />
+  <arg name="camera_fy"   default="600.0" />
+  <arg name="camera_cx"   default="320.0" />
+  <arg name="camera_cy"   default="240.0" />
+
+  <arg name="camera_topic" default="/camera/image_raw" />
+
+  <!-- ArUco localization node -->
+
+  <node pkg="aruco_localization" type="aruco_localization_node" name="aruco_localization_node" output="screen">
+    <param name="marker_size" value="$(arg marker_size)" />
+    <param name="camera_fx"   value="$(arg camera_fx)" />
+    <param name="camera_fy"   value="$(arg camera_fy)" />
+    <param name="camera_cx"   value="$(arg camera_cx)" />
+    <param name="camera_cy"   value="$(arg camera_cy)" />
+
+    <remap from="/camera/image_raw" to="$(arg camera_topic)" />
+  </node>  
+</launch>
