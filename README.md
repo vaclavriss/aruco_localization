@@ -53,3 +53,16 @@ This will try to use your webcam and detect tags of type **DICT_4X4_50**.
 ## Notes
 - Requires **ROS Noetic**.
 - Make sure your camera intrinsics are set correctly in the launch file for accurate pose estimation.
+
+
+---
+
+## Launch Parameters
+
+The main launch file (`aruco_localization.launch`) allows you to configure several parameters:
+
+- **marker_size**: The physical size of the ArUco tag in **meters** (e.g., `0.05` = 5 cm).  
+- **camera_fx**, **camera_fy**: The focal lengths of the camera in pixels (from camera intrinsics).  
+- **camera_cx**, **camera_cy**: The optical center (principal point) of the camera in pixels.  
+
+⚠️ Make sure these parameters match your camera calibration for accurate pose estimation.
