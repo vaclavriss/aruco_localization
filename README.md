@@ -17,7 +17,7 @@ Built for **ROS Noetic**.
 
 2. Clone this repository into the `src` folder:
    ```bash
-   git clone https://github.com/your-username/aruco_localization.git
+   git clone <this_repository>
    ```
 
 3. Build the workspace:
