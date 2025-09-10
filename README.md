@@ -63,6 +63,6 @@ The main launch file (`aruco_localization.launch`) allows you to configure sever
 
 - **marker_size**: The physical size of the ArUco tag in **meters** (e.g., `0.05` = 5 cm).  
 - **camera_fx**, **camera_fy**: The focal lengths of the camera in pixels (from camera intrinsics). 
-- **camera_cx**, **camera_cy**: The optical center (principal point) of the camera in pixels. For example,if resolution of the image from the camera has resolution **960x540** , the parameters will be**camera_cx** = 480.0 **camera_cy** = 290.0. 
+- **camera_cx**, **camera_cy**: The optical center (principal point) of the camera in pixels. Example: If resolution of the image obtained from the camera has resolution **960x540** , the parameters will be **camera_cx = 480.0** **camera_cy = 290.0**. 
 
 ⚠️ Make sure these parameters match your camera calibration for accurate pose estimation.
